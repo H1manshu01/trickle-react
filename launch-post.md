@@ -1,11 +1,11 @@
 ---
 title: "Stream an LLM object into React, field by field — in one hook"
-published: false
+published: true
 description: "Streaming a structured object into a UI means parsing JSON that's broken until the last token, then knowing which fields are done. Here's trickle-react — one typed hook that fills your object in live with per-field loading status — and the four tiny zero-dep packages behind it."
 tags: react, typescript, ai, opensource
 series: "Streaming structured output"
 cover_image: https://raw.githubusercontent.com/H1manshu01/trickle-react/main/assets/cover.png
-canonical_url: https://dev.to/h1manshu01/stream-an-llm-object-into-react-field-by-field-in-one-hook
+canonical_url: https://dev.to/h1manshu01/stream-an-llm-object-into-react-field-by-field-in-one-hook-43jp
 ---
 
 You asked the model for a JSON object and set `stream: true` so the UI can fill
