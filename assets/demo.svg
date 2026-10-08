@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" role="img" aria-label="trickle-react filling a profile card field by field as an LLM response streams in">
+  <defs>
+    <style>
+      .fn { fill: #ffa657; }
+      .k  { fill: #79c0ff; }
+      .s  { fill: #a5d6ff; }
+      .p  { fill: #8b949e; }
+      .c  { fill: #6e7681; }
+      .ok { fill: #27c93f; }
+      .t  { font-size: 14px; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="720" height="420" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <rect x="0" y="0" width="720" height="40" rx="12" fill="#161b22"/>
+  <rect x="0" y="28" width="720" height="12" fill="#161b22"/>
+  <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="20" r="6" fill="#ffbd2e"/>
+  <circle cx="66" cy="20" r="6" fill="#27c93f"/>
+  <text x="360" y="25" text-anchor="middle" font-size="13" fill="#8b949e">ProfileCard.tsx · rendering as it streams</text>
+
+  <rect width="0" height="0">
+    <animate id="loop" attributeName="width" begin="0s;loop.end" dur="7.6s" values="0;0"/>
+  </rect>
+
+  <g opacity="0">
+    <animate attributeName="opacity" begin="loop.begin+0.2s" dur="0.2s" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="loop.begin+7.2s" dur="0.2s" to="0" fill="freeze"/>
+    <text class="t c" x="28" y="80">// one hook — the card fills in, field by field</text>
+    <text class="t fn" x="28" y="110">useStreamingObject(Profile, stream)</text>
+  </g>
+
+  <!-- field rows: value appears, then a ✓ as the field settles -->
+  <!-- name -->
+  <g opacity="0">
+    <animate attributeName="opacity" begin="loop.begin+1.3s" dur="0.2s" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="loop.begin+7.2s" dur="0.2s" to="0" fill="freeze"/>
+    <text class="t" x="40" y="156"><tspan class="k">name</tspan><tspan class="p">   </tspan><tspan class="s">"Ada Lovelace"</tspan></text>
+  </g>
+  <text class="t ok" x="520" y="156" opacity="0">✓
+    <animate attributeName="opacity" begin="loop.begin+2.2s" dur="0.2s" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="loop.begin+7.2s" dur="0.2s" to="0" fill="freeze"/>
+  </text>
+  <!-- city -->
+  <g opacity="0">
+    <animate attributeName="opacity" begin="loop.begin+2.2s" dur="0.2s" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="loop.begin+7.2s" dur="0.2s" to="0" fill="freeze"/>
+    <text class="t" x="40" y="188"><tspan class="k">city</tspan><tspan class="p">   </tspan><tspan class="s">"London"</tspan></text>
+  </g>
+  <text class="t ok" x="520" y="188" opacity="0">✓
+    <animate attributeName="opacity" begin="loop.begin+3.1s" dur="0.2s" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="loop.begin+7.2s" dur="0.2s" to="0" fill="freeze"/>
+  </text>
+  <!-- bio -->
+  <g opacity="0">
+    <animate attributeName="opacity" begin="loop.begin+3.1s" dur="0.2s" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="loop.begin+7.2s" dur="0.2s" to="0" fill="freeze"/>
+    <text class="t" x="40" y="220"><tspan class="k">bio</tspan><tspan class="p">    </tspan><tspan class="s">"Builds developer tools."</tspan></text>
+  </g>
+  <text class="t c" x="520" y="220" opacity="0">…
+    <animate attributeName="opacity" begin="loop.begin+3.1s" dur="0.2s" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="loop.begin+4.6s" dur="0.2s" to="0" fill="freeze"/>
+  </text>
+  <text class="t ok" x="520" y="220" opacity="0">✓
+    <animate attributeName="opacity" begin="loop.begin+4.6s" dur="0.2s" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="loop.begin+7.2s" dur="0.2s" to="0" fill="freeze"/>
+  </text>
+
+  <!-- done -->
+  <g opacity="0">
+    <animate attributeName="opacity" begin="loop.begin+4.9s" dur="0.2s" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="loop.begin+7.2s" dur="0.2s" to="0" fill="freeze"/>
+    <text class="t" x="40" y="262"><tspan class="p">done   → </tspan><tspan class="ok">true</tspan></text>
+  </g>
+
+  <rect x="28" y="300" width="9" height="18" fill="#ffa657">
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  <text class="t c" x="44" y="314">const { data, status, done } = useStreamingObject(…)</text>
+</svg>
