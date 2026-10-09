@@ -90,6 +90,10 @@ fetch → SSE (sse-wire) → parse partial JSON (trickle-json) → repair/coerce
 - [`sse-wire`](https://www.npmjs.com/package/sse-wire) — fetch-based SSE (POST + headers).
 - [`trickle-json`](https://www.npmjs.com/package/trickle-json) — incremental partial-JSON parser (the engine this is built on).
 - [`coerce-json`](https://www.npmjs.com/package/coerce-json) — schema repair/coercion for the final value.
+- [`trickle-structured`](https://www.npmjs.com/package/trickle-structured) — the same pipeline without React: one call to a typed, validated object. The **vanilla counterpart to this package**.
+- [`expect-llm`](https://www.npmjs.com/package/expect-llm) — assert LLM output in Vitest or Jest.
+- [`retry-wire`](https://www.npmjs.com/package/retry-wire) — provider-aware retry and throttle for the request that opens the stream.
+- [`context-budgeter`](https://www.npmjs.com/package/context-budgeter) — fit a chat history into the model's context window.
 
 You don't need all of them — `trickle-react` only depends on `trickle-json`.
 Bring `sse-wire` for the stream and `coerce-json`/`zod` for validation if you
